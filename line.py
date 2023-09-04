@@ -46,7 +46,7 @@ if __name__ == "__main__":
     # 送信先 URL
     access_token = args[0]
     # メッセージ
-    message = "Hello, World!"
+    message = "".join(args[1:])
     # インスタンス化
     bot = LINENotifyBot(token = access_token)
     # 送信

@@ -6,7 +6,7 @@ Twitter からツイートを取得して処理して LINE にメッセージを
 
 # 使い方
 ``` bash
-./main.py ACCESS_TOKEN
+./line.py ACCESS_TOKEN
 ```
 
 `ACCESS_TOKEN` には [LINE Notify 公式](https://notify-bot.line.me/ja/) で取得したアクセストークンを入力。
