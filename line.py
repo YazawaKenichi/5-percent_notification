@@ -38,10 +38,20 @@ def get_args(ui = False):
             dest = "visible",
             help = "デバッグモード"
             )
+
+    parser.add_option(
+            "-m",
+            type = "string",
+            default = None,
+            dest = "media",
+            help = "メディア"
+            )
+
     return parser.parse_args()
 
 if __name__ == "__main__":
     optiondict, args = get_args(ui = False)
+    media = optiondict.media
     UI = optiondict.visible
     # 送信先 URL
     access_token = args[0]
@@ -50,7 +60,7 @@ if __name__ == "__main__":
     # インスタンス化
     bot = LINENotifyBot(token = access_token)
     # 送信
-    bot.send(message = message, image = None, sticker_package_id = None, sticker_id = None)
+    bot.send(message = message, image = media, sticker_package_id = None, sticker_id = None)
 
 
 
